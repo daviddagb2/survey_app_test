@@ -47,6 +47,7 @@ dependencies {
     implementation(libs.moshi.kotlin)
     implementation(libs.moshi.adapters)
     implementation(libs.androidx.paging)
+    implementation(libs.androidx.junit.ktx)
 
     androidTestImplementation(libs.junit)
     debugImplementation(libs.chucker)

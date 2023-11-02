@@ -63,6 +63,7 @@ chucker = { group = "com.github.chuckerteam.chucker", name = "library", version.
 chucker-no-op = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chuker_version" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material_version" }
 androidx-room-rxjava = { group = "androidx.room", name = "room-rxjava2", version.ref = "room" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version = "1.1.5" }
 
 [plugins]
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
