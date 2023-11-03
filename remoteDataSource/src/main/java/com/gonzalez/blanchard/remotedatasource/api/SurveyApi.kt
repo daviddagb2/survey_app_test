@@ -1,6 +1,6 @@
 package com.gonzalez.blanchard.remotedatasource.api
 
-import com.gonzalez.blanchard.remotedatasource.models.SurveyResponseDto
+import com.gonzalez.blanchard.remotedatasource.models.surveylist.SurveyResponseDto
 import com.gonzalez.blanchard.remotedatasource.models.UserDto
 import com.gonzalez.blanchard.remotedatasource.models.input.LogoutRequestDto
 import com.gonzalez.blanchard.remotedatasource.models.input.UserRequestDto

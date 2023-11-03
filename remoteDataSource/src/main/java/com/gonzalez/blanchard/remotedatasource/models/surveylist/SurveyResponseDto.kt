@@ -1,6 +1,6 @@
-package com.gonzalez.blanchard.remotedatasource.models
+package com.gonzalez.blanchard.remotedatasource.models.surveylist
 
-import com.gonzalez.blanchard.remotedatasource.models.surveylist.SurveyDto
+import com.gonzalez.blanchard.remotedatasource.models.MetaDto
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 

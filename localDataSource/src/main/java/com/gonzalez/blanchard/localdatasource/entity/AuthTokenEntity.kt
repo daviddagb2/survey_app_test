@@ -14,6 +14,6 @@ data class AuthTokenEntity(
     @ColumnInfo(name = "token_type") val tokenType: String,
     @ColumnInfo(name = "expires_in") val expiresIn: Int,
     @ColumnInfo(name = "refresh_token") val refreshToken: String,
-    @ColumnInfo(name = "created_at") val createdAt: Int,
+    @ColumnInfo(name = "created_at") val createdAt: String,
 )
 

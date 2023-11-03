@@ -19,5 +19,5 @@ data class UserData(
 data class UserDataAttributes(
     @Json(name = "email") val email: String?,
     @Json(name = "name") val name: String?,
-    @Json(name = "avatar_url") val avatarUrl: Int?,
+    @Json(name = "avatar_url") val avatarUrl: String?,
 )

@@ -7,4 +7,4 @@ import com.squareup.moshi.JsonClass
 data class SurveyDetailDto(
     @Json(name = "data") val data: SurveyDetailDataDto?,
     @Json(name = "included") val included: List<IncludedDto>?,
-    )
+)
