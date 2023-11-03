@@ -1,4 +1,4 @@
-package com.gonzalez.blanchard.domain
+package com.gonzalez.blanchard.domain.usecases
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

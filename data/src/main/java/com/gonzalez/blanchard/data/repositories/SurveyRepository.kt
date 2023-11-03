@@ -1,5 +1,6 @@
 package com.gonzalez.blanchard.data.repositories
 
+import com.gonzalez.blanchard.data.mappers.bo.toSurveyResponseRequestDto
 import com.gonzalez.blanchard.data.mappers.dto.surveydetail.toSurveyDetailBO
 import com.gonzalez.blanchard.data.mappers.dto.toSurveyResponseBO
 import com.gonzalez.blanchard.domain.models.surveydetail.SurveyDetailBO
@@ -25,7 +26,6 @@ class SurveyRepository @Inject constructor(
         }
 
         override suspend fun postSurveyResponse(request: SurveyResponseRequestBO) {
-            // TODO: Implement this
-            ////surveyRemoteDataSource.postSurveyResponse(request.to)
+            surveyRemoteDataSource.postSurveyResponse(request.toSurveyResponseRequestDto())
         }
     }
