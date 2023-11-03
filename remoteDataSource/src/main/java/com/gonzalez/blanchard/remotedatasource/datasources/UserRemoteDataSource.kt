@@ -2,8 +2,8 @@ package com.gonzalez.blanchard.remotedatasource.datasources
 
 import com.gonzalez.blanchard.extensions.parseResponse
 import com.gonzalez.blanchard.remotedatasource.api.SurveyApi
-import com.gonzalez.blanchard.remotedatasource.models.LoginResponseDto
 import com.gonzalez.blanchard.remotedatasource.models.input.LoginDto
+import com.gonzalez.blanchard.remotedatasource.models.login.LoginResponseDto
 import javax.inject.Inject
 
 class UserRemoteDataSource @Inject constructor(
@@ -20,5 +20,4 @@ class UserRemoteDataSource @Inject constructor(
             loginDto.clientSecret,
         ).parseResponse()
     }
-
 }

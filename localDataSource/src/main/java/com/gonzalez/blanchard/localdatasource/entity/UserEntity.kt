@@ -15,3 +15,6 @@ data class UserEntity(
     @ColumnInfo(name = "avatar_url") val avatarUrl: String,
 )
 
+
+
+
