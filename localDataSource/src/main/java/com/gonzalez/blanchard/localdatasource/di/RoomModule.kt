@@ -20,7 +20,7 @@ class RoomModule {
 
     companion object {
         @VisibleForTesting
-        val APP_DATABASE_NAME = "WeatherDB"
+        val APP_DATABASE_NAME = "SurveyDb"
     }
 
     @Provides
