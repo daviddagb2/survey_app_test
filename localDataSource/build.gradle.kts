@@ -22,7 +22,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.sqlcipher)
     implementation(libs.moshi.kotlin)
     implementation(libs.moshi.adapters)
+    implementation(libs.androidx.junit.ktx)
     testImplementation(libs.junit)
     kapt(libs.dagger.compiler)
     kapt(libs.androidx.room.compiler)
