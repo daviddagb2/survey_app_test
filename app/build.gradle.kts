@@ -79,6 +79,7 @@ dependencies {
 
     // Picasso for images
     implementation(libs.picasso)
+    implementation("jp.wasabeef:picasso-transformations:2.4.0")
 
     kapt(libs.dagger.hilt.compiler)
     kapt(libs.dagger.compiler)

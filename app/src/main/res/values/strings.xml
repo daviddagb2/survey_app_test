@@ -9,5 +9,13 @@
     <string name="password">Password</string>
     <string name="question_example">How fulfilled did you feel during this WFH period?</string>
     <string name="exit_warning">Are you sure you want to exit the survey?</string>
+    <string name="exit_logout">Are you sure you want to logout?</string>
+    <string name="str_start_survey">Start Survey</string>
+    <string name="str_lorem_ipsum">Lorem ipsum dolor sit amet</string>
+    <string name="str_lorem_ipsum_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</string>
+    <string name="str_thanks_survey">Thanks for taking the survey.</string>
+    <string name="nav_header_desc"></string>
+    <string name="nav_header_title">Mai</string>
+    <string name="menu_logout">Logout</string>
 
 </resources>

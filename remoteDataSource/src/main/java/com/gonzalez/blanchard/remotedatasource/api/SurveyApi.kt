@@ -1,11 +1,12 @@
 package com.gonzalez.blanchard.remotedatasource.api
 
-import com.gonzalez.blanchard.remotedatasource.models.surveylist.SurveyResponseDto
 import com.gonzalez.blanchard.remotedatasource.models.UserDto
 import com.gonzalez.blanchard.remotedatasource.models.input.LogoutRequestDto
+import com.gonzalez.blanchard.remotedatasource.models.input.RefreshRequestDto
 import com.gonzalez.blanchard.remotedatasource.models.input.UserRequestDto
 import com.gonzalez.blanchard.remotedatasource.models.login.LoginResponseDto
 import com.gonzalez.blanchard.remotedatasource.models.surveydetail.SurveyDetailDto
+import com.gonzalez.blanchard.remotedatasource.models.surveylist.SurveyResponseDto
 import com.gonzalez.blanchard.remotedatasource.models.surveyresponses.SurveyResponseRequestDto
 import retrofit2.Response
 import retrofit2.http.Body
@@ -28,6 +29,11 @@ interface SurveyApi {
     suspend fun logout(
         @Body request: LogoutRequestDto,
     )
+
+    @POST("/api/v1/oauth/token")
+    suspend fun refreshToken(
+        @Body request: RefreshRequestDto,
+    ): Response<LoginResponseDto>
 
     @POST("/api/v1/passwords")
     suspend fun forgotPassword(

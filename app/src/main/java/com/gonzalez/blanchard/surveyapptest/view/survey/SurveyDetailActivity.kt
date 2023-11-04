@@ -56,7 +56,6 @@ class SurveyDetailActivity : AppCompatActivity() {
             when (status) {
                 SurveyDetailStatus.IsLoading -> showLoader()
                 SurveyDetailStatus.Error -> showError()
-                else -> {}
             }
         }
     }
@@ -89,7 +88,7 @@ class SurveyDetailActivity : AppCompatActivity() {
         if (nextItem < binding.surveyQuestionsViewPager.adapter!!.itemCount) {
             binding.surveyQuestionsViewPager.currentItem = nextItem
         } else {
-            Toast.makeText(applicationContext, "End of Survey", Toast.LENGTH_SHORT).show()
+            onFinishSurvey()
         }
     }
 
@@ -121,6 +120,11 @@ class SurveyDetailActivity : AppCompatActivity() {
             }
             .setCancelable(false)
             .show()
+    }
+
+    private fun onFinishSurvey() {
+        Toast.makeText(applicationContext, "End of Survey", Toast.LENGTH_SHORT).show()
+        finish()
     }
 
     private fun onConfirmExit() {

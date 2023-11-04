@@ -17,6 +17,7 @@ class QuestionViewHolder(view: View, private val onClickListener: (QueryItemBO) 
         } else {
             binding.numQuestionText.text = "${queryItem.attributes.displayOrder}/$totalPages"
         }
+
         binding.arrowIcon.setOnClickListener {
             onClickListener(queryItem)
         }
