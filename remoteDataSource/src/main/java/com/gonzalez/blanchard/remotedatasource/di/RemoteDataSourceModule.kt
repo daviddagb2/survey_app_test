@@ -1,7 +1,7 @@
 package com.gonzalez.blanchard.remotedatasource.di
 
-import com.gonzalez.blanchard.interceptor.AccessTokenInterceptor
 import com.gonzalez.blanchard.remotedatasource.api.SurveyApi
+import com.gonzalez.blanchard.remotedatasource.interceptor.AccessTokenInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module

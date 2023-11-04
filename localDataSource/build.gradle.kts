@@ -27,11 +27,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
@@ -45,6 +45,9 @@ dependencies {
     implementation(libs.moshi.kotlin)
     implementation(libs.moshi.adapters)
     implementation(libs.androidx.junit.ktx)
+    implementation(libs.rxreactive.java)
+    implementation(libs.rxreactive.android)
+
     testImplementation(libs.junit)
     kapt(libs.dagger.compiler)
     kapt(libs.androidx.room.compiler)

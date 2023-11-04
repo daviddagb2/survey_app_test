@@ -1,6 +1,6 @@
 package com.gonzalez.blanchard.domain.models.surveydetail
 
-data class IncludedBO(
+data class QueryItemBO(
     val id: String,
     val type: String,
     val attributes: IncludedAttributesBO,

@@ -26,6 +26,10 @@ core_version = "1.9.0"
 hiltCompilerVersion = "2.44"
 crypto_version = "1.1.0-alpha06"
 paging3_version = "3.1.1"
+viewpager_version = "1.0.0"
+picasso_version = "2.8"
+rxjava_version = "2.2.21"
+rxandroid_version = "2.1.1"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -64,6 +68,10 @@ chucker-no-op = { group = "com.github.chuckerteam.chucker", name = "library-no-o
 material = { group = "com.google.android.material", name = "material", version.ref = "material_version" }
 androidx-room-rxjava = { group = "androidx.room", name = "room-rxjava2", version.ref = "room" }
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version = "1.1.5" }
+androidx-viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager_version" }
+picasso = { group = "com.squareup.picasso", name = "picasso", version.ref = "picasso_version" }
+rxreactive-java = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjava_version" }
+rxreactive-android = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroid_version" }
 
 [plugins]
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }

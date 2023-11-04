@@ -1,26 +1,25 @@
-package com.gonzalez.blanchard.interceptor
+package com.gonzalez.blanchard.remotedatasource.interceptor
 
+import com.gonzalez.blanchard.localdatasource.utils.AuthManager
 import okhttp3.Interceptor
 import okhttp3.Response
 import java.io.IOException
 import javax.inject.Inject
 
-class AccessTokenInterceptor @Inject constructor() : Interceptor {
+class AccessTokenInterceptor @Inject constructor(
+    private val authManager: AuthManager,
+) : Interceptor {
     @Throws(IOException::class)
     override fun intercept(chain: Interceptor.Chain): Response {
-        val originalRequest = chain.request()
-        val accessToken = getUserAccessToken()
+        val builder = chain.request().newBuilder()
+        if (chain.request().headers[API_KEY].isNullOrEmpty()) {
+            builder.header(API_KEY, "Bearer ${authManager.accessToken}")
+        }
 
-        // Adds the Bearer token to the Authorization header
-        val newRequest = originalRequest.newBuilder()
-            .header("Authorization", "Bearer $accessToken")
-            .build()
-
-        return chain.proceed(newRequest)
+        return chain.proceed(builder.build())
     }
 
-    private fun getUserAccessToken(): String {
-        // TODO: Change this to get the real acces token
-        return "6whcvBsM6ks3WOGVWjT-y_4QVXDTlM4aeiQsozsZya8"
+    companion object {
+        const val API_KEY = "Authorization"
     }
 }

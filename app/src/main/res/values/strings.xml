@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">SurveyAppTest</string>
     <string name="arrow_icon_desc">Next</string>
+    <string name="error_login">An error occurred during login. Please try again.</string>
+    <string name="error_main">An error occurred during loading surveys. Please try again.</string>
+    <string name="error_detail">An error occurred during loading the survey.</string>
+    <string name="str_login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="question_example">How fulfilled did you feel during this WFH period?</string>
+    <string name="exit_warning">Are you sure you want to exit the survey?</string>
+
 </resources>

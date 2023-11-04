@@ -18,10 +18,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <FrameLayout
+        android:id="@+id/opacityFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/survey_opacity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="40dp"
         android:orientation="vertical"
         android:paddingLeft="10dp"
         android:paddingRight="20dp"
@@ -30,14 +42,14 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/checkInText"
+            android:id="@+id/titleText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="20dp"
             android:text="Working from home Check-In"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/subText"
@@ -46,15 +58,15 @@
             android:layout_marginStart="20dp"
             android:text="We would like to know how you feel about our work from home..."
             android:textColor="@color/gray_text"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/arrowIcon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/rounded_background"
         android:contentDescription="@string/arrow_icon_desc"
         android:padding="10dp"

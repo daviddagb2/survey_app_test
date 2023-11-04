@@ -1,12 +1,12 @@
 package com.gonzalez.blanchard.data.mappers.dto.surveydetail
 
 import com.gonzalez.blanchard.domain.models.surveydetail.IncludedAttributesBO
-import com.gonzalez.blanchard.domain.models.surveydetail.IncludedBO
+import com.gonzalez.blanchard.domain.models.surveydetail.QueryItemBO
 import com.gonzalez.blanchard.domain.models.surveydetail.QuestionBO
 import com.gonzalez.blanchard.domain.models.surveydetail.RelationshipBO
 import com.gonzalez.blanchard.remotedatasource.models.surveydetail.IncludedDto
 
-fun IncludedDto.toIncludedBO(): IncludedBO = IncludedBO(
+fun IncludedDto.toIncludedBO(): QueryItemBO = QueryItemBO(
     id = this.id ?: "",
     type = this.type ?: "",
     attributes = this.attributes?.toIncludedAttributesBO() ?: IncludedAttributesBO(
@@ -37,5 +37,5 @@ fun IncludedDto.toIncludedBO(): IncludedBO = IncludedBO(
     ),
 )
 
-fun List<IncludedDto>?.toSurveyBOList(): List<IncludedBO> =
+fun List<IncludedDto>?.toSurveyBOList(): List<QueryItemBO> =
     this?.map { it.toIncludedBO() } ?: run { listOf() }

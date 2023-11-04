@@ -3,4 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray_text">#DADADA</color>
+    <color name="color_text_hint">#D8C3C3C3</color>
+    <color name="input_background">#74514F4D</color>
+    <color name="survey_opacity">#59000000</color>
 </resources>
