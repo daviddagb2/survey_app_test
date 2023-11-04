@@ -5,7 +5,7 @@ This repository contains the SurveyAppTest, an Android application developed as 
 ## Download APK
 The APK can be downloaded for testing purposes. The link will be provided upon successful build and release.
 
-- [APK DEMO LINK](https://github.com/daviddagb2/survey_app_test/blob/master/apktest/app-debug.apk)
+- [APK DEMO LINK](https://github.com/daviddagb2/survey_app_test/raw/master/apktest/app-debug.apk)
 
 
 ## Features
@@ -57,7 +57,7 @@ Clone the repository, open it in Android Studio, and run the application on your
 ## Download APK
 The APK can be downloaded for testing purposes. The link will be provided upon successful build and release.
 
-- [APK DEMO LINK](https://github.com/daviddagb2/survey_app_test/blob/master/apktest/app-debug.apk)
+- [APK DEMO LINK](https://github.com/daviddagb2/survey_app_test/raw/master/apktest/app-debug.apk)
 
 ## Tech stack & Open-source libraries
 - [Android Kotlin](https://developer.android.com/kotlin)
