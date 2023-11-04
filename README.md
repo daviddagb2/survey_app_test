@@ -51,9 +51,7 @@ Clone the repository, open it in Android Studio, and run the application on your
 ## Download APK
 The APK can be downloaded for testing purposes. The link will be provided upon successful build and release.
 
-- [APK DEMO LINK - Coming Soon]
-
-
+- [APK DEMO LINK](https://github.com/daviddagb2/survey_app_test/blob/master/apktest/app-debug.apk)
 
 ## Tech stack & Open-source libraries
 - [Android Kotlin](https://developer.android.com/kotlin)
@@ -71,11 +69,4 @@ The APK can be downloaded for testing purposes. The link will be provided upon s
 - [Blog](https://blanchardspace.wordpress.com/)
 - [Linktree](https://linktr.ee/davidgb77)
 - [Youtube](https://www.youtube.com/@developergb)
-
-## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-
-Thank you for considering the SurveyAppTest for your technical test assessment.
-
-
 
