@@ -11,7 +11,12 @@ class QuestionViewHolder(view: View, private val onClickListener: (QueryItemBO) 
 
     fun bind(queryItem: QueryItemBO, totalElements: Int) {
         binding.titleText.text = queryItem.attributes.text
-        binding.numQuestionText.text = "${queryItem.attributes.displayOrder}/$totalElements"
+        val totalPages = totalElements - 1
+        if (queryItem.attributes.displayOrder <= 0) {
+            binding.numQuestionText.text = ""
+        } else {
+            binding.numQuestionText.text = "${queryItem.attributes.displayOrder}/$totalPages"
+        }
         binding.arrowIcon.setOnClickListener {
             onClickListener(queryItem)
         }

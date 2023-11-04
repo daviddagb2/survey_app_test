@@ -85,13 +85,27 @@ class SurveyDetailActivity : AppCompatActivity() {
     }
 
     private fun onQueryItemClicked(queryItem: QueryItemBO) {
-       // surveyDetailViewModel.onQueryItemClicked(queryItem)
-        Toast.makeText(applicationContext, "Query Item Clicked", Toast.LENGTH_SHORT).show()
+        val nextItem = binding.surveyQuestionsViewPager.currentItem + 1
+        if (nextItem < binding.surveyQuestionsViewPager.adapter!!.itemCount) {
+            binding.surveyQuestionsViewPager.currentItem = nextItem
+        } else {
+            Toast.makeText(applicationContext, "End of Survey", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun initButtonsListeners() {
         binding.imageClose.setOnClickListener() {
             surveyDetailViewModel.onSurveyCloseClicked()
+        }
+
+        binding.surveyQuestionsViewPager.apply {
+            this.setOnTouchListener { _, _ ->
+                true
+            }
+        }
+
+        binding.surveyQuestionsViewPager.setOnTouchListener { _, _ ->
+            true
         }
     }
 
@@ -99,10 +113,10 @@ class SurveyDetailActivity : AppCompatActivity() {
         AlertDialog.Builder(context)
             .setTitle("Warning")
             .setMessage(getString(R.string.exit_warning))
-            .setPositiveButton("Yes") { dialog, which ->
+            .setPositiveButton("Yes") { _, _ ->
                 onConfirmExit()
             }
-            .setNegativeButton("Cancel") { dialog, which ->
+            .setNegativeButton("Cancel") { dialog, _ ->
                 dialog.dismiss()
             }
             .setCancelable(false)
