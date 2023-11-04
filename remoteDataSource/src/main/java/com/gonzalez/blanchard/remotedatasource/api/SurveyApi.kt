@@ -1,8 +1,10 @@
 package com.gonzalez.blanchard.remotedatasource.api
 
+import com.gonzalez.blanchard.remotedatasource.models.ForgotPasswordDto
 import com.gonzalez.blanchard.remotedatasource.models.UserDto
 import com.gonzalez.blanchard.remotedatasource.models.input.LogoutRequestDto
 import com.gonzalez.blanchard.remotedatasource.models.input.RefreshRequestDto
+import com.gonzalez.blanchard.remotedatasource.models.input.RequestPasswordDto
 import com.gonzalez.blanchard.remotedatasource.models.input.UserRequestDto
 import com.gonzalez.blanchard.remotedatasource.models.login.LoginResponseDto
 import com.gonzalez.blanchard.remotedatasource.models.surveydetail.SurveyDetailDto
@@ -37,8 +39,8 @@ interface SurveyApi {
 
     @POST("/api/v1/passwords")
     suspend fun forgotPassword(
-        @Body request: UserRequestDto,
-    )
+        @Body request: RequestPasswordDto,
+    ): Response<ForgotPasswordDto>
 
     @GET("/api/v1/me")
     suspend fun getUserProfile(): Response<UserDto>

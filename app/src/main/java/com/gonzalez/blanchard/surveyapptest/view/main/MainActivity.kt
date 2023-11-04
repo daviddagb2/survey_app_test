@@ -16,6 +16,7 @@ import com.gonzalez.blanchard.surveyapptest.R
 import com.gonzalez.blanchard.surveyapptest.constants.ITEM_SURVEY_CLICKED
 import com.gonzalez.blanchard.surveyapptest.databinding.ActivityMainBinding
 import com.gonzalez.blanchard.surveyapptest.extensions.launchAndCollect
+import com.gonzalez.blanchard.surveyapptest.view.login.LoginActivity
 import com.gonzalez.blanchard.surveyapptest.view.main.carousel.SurveyAdapter
 import com.gonzalez.blanchard.surveyapptest.view.survey.SurveyDetailActivity
 import com.google.android.material.tabs.TabLayoutMediator
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 is MainActivityActions.GoToSurveyDetail -> goToSurveyDetail(actions.survey)
                 is MainActivityActions.ShowSurveys -> initViewPager(actions.response.surveys)
                 is MainActivityActions.LoadUserData -> loadUserData(actions.userBO)
-                MainActivityActions.Logout -> finish()
+                MainActivityActions.Logout -> doLogout()
             }
         }
     }
@@ -142,6 +143,11 @@ class MainActivity : AppCompatActivity() {
             binding.drawerLayout.closeDrawer(GravityCompat.END)
             true
         }
+    }
+
+    private fun doLogout() {
+        startActivity(Intent(this, LoginActivity::class.java))
+        finish()
     }
 
     private fun showLogoutWarning(context: Context) {

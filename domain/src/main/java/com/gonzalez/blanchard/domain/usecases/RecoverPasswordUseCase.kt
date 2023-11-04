@@ -5,9 +5,9 @@ import javax.inject.Inject
 
 class RecoverPasswordUseCase @Inject constructor(
     private val authRepository: IAuthRepository,
-) : UseCase<Unit, Unit>() {
+) : UseCase<String, String>() {
 
-    override suspend fun useCaseFunction(input: Unit) {
-        // TODO: authRepository.recoverPassword()
+    override suspend fun useCaseFunction(email: String): String {
+        return authRepository.recoverPassword(email)
     }
 }

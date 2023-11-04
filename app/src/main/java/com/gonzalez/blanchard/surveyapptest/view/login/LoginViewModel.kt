@@ -27,6 +27,12 @@ class LoginViewModel @Inject constructor(
         }
     }
 
+    fun forgotPassword(){
+        viewModelScope.launch {
+            _action.send(LoginActions.GoToForgotPassword)
+        }
+    }
+
     fun doLogin(email: String, password: String) {
         executeUseCase(action = {
             _status.send(LoginStatus.IsLoading)

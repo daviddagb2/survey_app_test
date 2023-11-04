@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.gonzalez.blanchard.domain.models.surveydetail.QueryItemBO
 import com.gonzalez.blanchard.domain.models.surveydetail.SurveyDetailBO
 import com.gonzalez.blanchard.surveyapptest.R
@@ -61,13 +62,13 @@ class SurveyDetailActivity : AppCompatActivity() {
     }
 
     private fun showLoader() {
-       // binding.loaderIndicator.isVisible = true
-       // binding.surveyViewPager.isVisible = false
+        binding.loaderIndicator.isVisible = true
+        binding.surveyQuestionsViewPager.isVisible = false
     }
 
     private fun hideLoader() {
-      //  binding.loaderIndicator.isVisible = false
-      //  binding.surveyViewPager.isVisible = true
+        binding.loaderIndicator.isVisible = false
+        binding.surveyQuestionsViewPager.isVisible = true
     }
 
     private fun showError() {

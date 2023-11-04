@@ -7,4 +7,5 @@ interface IAuthRepository {
     suspend fun logout()
     suspend fun refreshToken()
     suspend fun getAuth(): AuthTokenBO
+    suspend fun recoverPassword(email: String): String
 }

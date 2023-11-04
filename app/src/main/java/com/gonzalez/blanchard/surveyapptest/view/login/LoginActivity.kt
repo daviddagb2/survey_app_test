@@ -12,6 +12,7 @@ import com.gonzalez.blanchard.surveyapptest.R
 import com.gonzalez.blanchard.surveyapptest.databinding.ActivityLoginBinding
 import com.gonzalez.blanchard.surveyapptest.extensions.launchAndCollect
 import com.gonzalez.blanchard.surveyapptest.view.main.MainActivity
+import com.gonzalez.blanchard.surveyapptest.view.resetpassword.ResetPasswordActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
             when (action) {
                 LoginActions.GoToMain -> goToMain()
                 LoginActions.StopLoading -> hideLoader()
-                else -> {}
+                LoginActions.GoToForgotPassword -> goToForgot()
             }
         }
     }
@@ -79,12 +80,21 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 
+    private fun goToForgot() {
+        startActivity(Intent(this, ResetPasswordActivity::class.java))
+        finish()
+    }
+
     private fun initButtonsListeners() {
         binding.loginBtn.setOnClickListener {
             loginViewModel.doLogin(
                 binding.edtEmail.text.toString(),
                 binding.edtPassword.text.toString(),
             )
+        }
+
+        binding.txtForgot.setOnClickListener() {
+            loginViewModel.forgotPassword()
         }
     }
 

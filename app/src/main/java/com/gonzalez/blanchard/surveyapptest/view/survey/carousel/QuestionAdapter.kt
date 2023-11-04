@@ -46,6 +46,10 @@ class QuestionAdapter(
                 val view = layoutInflater.inflate(R.layout.item_survey_question, parent, false)
                 QuestionViewHolder(view, itemClickListener)
             }
+            VIEW_TYPE_OUTRO -> {
+                val view = layoutInflater.inflate(R.layout.layout_question_finish, parent, false)
+                QuestionFinishViewHolder(view, itemClickListener)
+            }
             else -> {
                 val view = layoutInflater.inflate(R.layout.item_survey_question, parent, false)
                 QuestionViewHolder(view, itemClickListener)

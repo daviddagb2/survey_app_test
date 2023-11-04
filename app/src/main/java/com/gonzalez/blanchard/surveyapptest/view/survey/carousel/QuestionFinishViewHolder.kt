@@ -12,6 +12,7 @@ class QuestionFinishViewHolder(view: View, private val onClickListener: (QueryIt
     private val binding = LayoutQuestionFinishBinding.bind(view)
 
     fun bind(queryItem: QueryItemBO) {
+        binding.txtThanks.text = queryItem.attributes.text
         val handler = Handler(Looper.getMainLooper())
         val runnable = Runnable {
             onClickListener(queryItem)

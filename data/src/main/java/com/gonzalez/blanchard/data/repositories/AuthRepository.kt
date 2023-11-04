@@ -14,6 +14,8 @@ import com.gonzalez.blanchard.remotedatasource.datasources.AuthRemoteDataSource
 import com.gonzalez.blanchard.remotedatasource.models.input.LoginDto
 import com.gonzalez.blanchard.remotedatasource.models.input.LogoutRequestDto
 import com.gonzalez.blanchard.remotedatasource.models.input.RefreshRequestDto
+import com.gonzalez.blanchard.remotedatasource.models.input.RequestPasswordDto
+import com.gonzalez.blanchard.remotedatasource.models.input.UserEmailDto
 import javax.inject.Inject
 
 class AuthRepository @Inject constructor(
@@ -68,5 +70,16 @@ class AuthRepository @Inject constructor(
             refreshToken = "",
             createdAt = "",
         )
+    }
+
+    override suspend fun recoverPassword(email: String): String {
+        val requestPassword = RequestPasswordDto(
+            user = UserEmailDto(
+                email = email,
+            ),
+            clientId = CLIENT_ID,
+            clientSecret = CLIENT_SECRET,
+        )
+        return authRemoteDataSource.forgotPassword(requestPassword)?.meta?.message ?: ""
     }
 }
