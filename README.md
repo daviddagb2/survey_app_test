@@ -2,6 +2,12 @@
 Nimbe Survey app - Creation of an application that allows users to browse a list of surveys. Users must log in to the application. 
 This repository contains the SurveyAppTest, an Android application developed as part of the technical test for the Android Developer position. The app features a robust login system and a home screen where users can browse through a list of surveys.
 
+## Download APK
+The APK can be downloaded for testing purposes. The link will be provided upon successful build and release.
+
+- [APK DEMO LINK](https://github.com/daviddagb2/survey_app_test/blob/master/apktest/app-debug.apk)
+
+
 ## Features
 
 ### Authentication
